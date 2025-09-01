@@ -1,7 +1,7 @@
-const int luminosidadePin = A0;
-const int ledPin1 = D0;
-const int ledPin2 = D1;
-const int ledPin3 = D2;
+const int luminosidadePin = 0;
+const int ledPin1 = 16;
+const int ledPin2 = 5;
+const int ledPin3 = 4;
 
 int luminosidade = 0;
 
@@ -16,7 +16,7 @@ void setup() {
 void loop() {
   luminosidade = analogRead(luminosidadePin);
   Serial.println(luminosidade);
-  if (luminosidade < 100) {
+  if (luminosidade < 1000) {
     digitalWrite(ledPin1, HIGH);
     digitalWrite(ledPin2, HIGH);
     digitalWrite(ledPin3, HIGH);
